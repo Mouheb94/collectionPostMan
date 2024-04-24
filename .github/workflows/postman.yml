@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 jobs: 
     execute-postman-tests:    
-    runs-on: ubuntu-latest
+       runs-on: ubuntu-latest
     steps:
       - name: recuperer le code
         uses: actions/checkout@v4
