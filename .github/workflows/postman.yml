@@ -7,10 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: recuperer le code
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Install Newman
-      - run: npm install -g newman
+        run: npm install -g newman
+      
+      - name: install HTMLextra
+      - run: npm install -g newman --reporter-htmlextra
 
       - name: Run Postman tests
-      - run: newman run swagger/postman/swagger.postman_collection.json
+        run: newman run /postman/collection.json --reporters=cli,htmlextra
