@@ -3,6 +3,7 @@ on:
   push: 
   workflow_dispatch:
 jobs: 
+    execute-postman-tests:    
     runs-on: ubuntu-latest
     steps:
       - name: recuperer le code
