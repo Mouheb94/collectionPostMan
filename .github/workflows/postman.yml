@@ -6,14 +6,14 @@ jobs:
     execute-postman-tests:    
        runs-on: ubuntu-latest
     steps:
-      - name: recuperer le code
-        uses: actions/checkout@v4
+        - name: recuperer le code
+          uses: actions/checkout@v4
 
-      - name: Install Newman
-        run: npm install -g newman
+        - name: Install Newman
+          run: npm install -g newman
       
-      - name: install HTMLextra
-      - run: npm install -g newman --reporter-htmlextra
+        - name: install HTMLextra
+          run: npm install -g newman --reporter-htmlextra
 
-      - name: Run Postman tests
-        run: newman run /postman/collection.json --reporters=cli,htmlextra
+        - name: Run Postman tests
+          run: newman run /postman/collection.json --reporters=cli,htmlextra
